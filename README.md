@@ -11,7 +11,6 @@ This tutorial is part of a series on Red Hat Marketplace operator FP Predict Plu
 Examples of binary classification problems include:
 
 * Given an example, classify if it is spam or not.
-* Given a handwritten character, classify it as one of the known characters.
 * Given recent user behavior, classify as churn or not.
 * Given recent transactions, classify as fraudulent or not.
 
