@@ -1,5 +1,7 @@
 # Introduction 
 
+`This tutorial is part of a series on Red Hat Marketplace operator FP Predict Plus. Please refer to the prerequisites section for getting started.`
+
 ### How to build a Machine Learning classification model using FP Predict Plus
 
 `Machine learning` is a large field of study that overlaps with and inherits ideas from many related fields such as artificial intelligence. The focus of the field is learning, that is, acquiring skills or knowledge from experience. Most commonly, this means synthesizing useful concepts from historical data. As such, there are many different types of learning that you may encounter as a practitioner in the field of machine learning: from whole fields of study to specific techniques.
