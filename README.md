@@ -14,7 +14,7 @@ Examples of binary classification problems include:
 * Given recent user behavior, classify as churn or not.
 * Given recent transactions, classify as fraudulent or not.
 
-We will be using **`FP Predict Plus operator` from `Red Hat Marketplace`** to solve this usecase. Please refer the links under `References` section to know more about `FP Predict Plus operator` and `Red Hat Marketplace`.
+We will be using **`FP Predict Plus operator` from `Red Hat Marketplace`** to solve this usecase. Please refer to the content under `Related Links` section to know more about `FP Predict Plus operator` and `Red Hat Marketplace`.
 
 # Prerequisites
 
@@ -102,6 +102,8 @@ We can download the results which has all the model details mentioned above for 
 
 In this section, we will learn how to do predictions using the model on new dataset. We will be using the `saved model` from previous step to predict new records from the `holdout data`.
 
+### Create predict job
+
 Lets create a new job for prediction by clicking on `Dashboard` option in the left navigation pane and hit `Start`. Update the `job name`, `description`, select `Predict` under `Tasks` as we have already built the model in previous steps. Upload the `model file` and `holdout data` from cloud or local whichever is convenient for you and select `Unique Identifier` as `Count`.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/prdt-frd.png)
@@ -110,9 +112,13 @@ The predict job will start per below.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/job-prdt-frd.png)
 
+### Check job summary
+
 Lets look at job summary by clicking `Dashboard` and selecting `predict-fraud` job. We can observe that, there are three records out of five having 90%-100% probability.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/job-chk.png)
+
+### Analyze results of predict job
 
 We can get more details in the next step where we can observe that 18 models were built in 10 seconds and prediction was made on five records from the holdout dataset.
 
@@ -122,6 +128,8 @@ Click on `Predicted vs Actual` option to evaluate the model performance. We can 
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/c-f-holdout-mtrx.png)
 
+### Download predicted results
+
 We can get other details about model performance by clicking on `Downloading results` per below.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/prdt-frd-dtls.png)
@@ -130,7 +138,7 @@ We can get other details about model performance by clicking on `Downloading res
 
 With this, we have come to an end of this tutorial. We have learnt how to use FP Predict Plus platform for building AI models using GUI and also explored how to churn out predictions on the new dataset. This platform will be beneficial for developers, data scientists to build AI solutions quickly on different domains.
 
-# References
+# Related Links
 
 [Click here to know more about FP Predict Plus](https://marketplace.redhat.com/en-us/products/fp-predict)
 
