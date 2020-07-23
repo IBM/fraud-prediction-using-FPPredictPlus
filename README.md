@@ -14,7 +14,7 @@ Examples of binary classification problems include:
 * Given recent user behavior, classify as churn or not.
 * Given recent transactions, classify as fraudulent or not.
 
-We will be using **`FP Predict Plus operator` from `Red Hat Marketplace`** to solve this usecase. Please refer the links to know more about [FP Predict Plus](https://marketplace.redhat.com/en-us/products/fp-predict) and [Red Hat Marketplace](https://marketplace.redhat.com/en-us).
+We will be using **`FP Predict Plus operator` from `Red Hat Marketplace`** to solve this usecase. Please refer the links under `references` section for more details.
 
 # Prerequisites
 
@@ -129,3 +129,7 @@ We can get other details about model performance by clicking on `Downloading res
 # Summary
 
 With this, we have come to an end of this tutorial. We have learnt how to use FP Predict Plus platform for building AI models using GUI and also explored how to churn out predictions on the new dataset. This platform will be beneficial for developers, data scientists to build AI solutions quickly on different domains.
+
+# References
+
+Please refer the links to know more about [FP Predict Plus](https://marketplace.redhat.com/en-us/products/fp-predict) and [Red Hat Marketplace](https://marketplace.redhat.com/en-us).
