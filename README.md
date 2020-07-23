@@ -1,6 +1,6 @@
 # Introduction 
 
-`This tutorial is part of a series on Red Hat Marketplace operator FP Predict Plus. Please refer to the prerequisites section for **Getting Started**.`
+**This tutorial is part of a series on Red Hat Marketplace operator FP Predict Plus. Please refer to the prerequisites section for **Getting Started.**
 
 ### How to build a Machine Learning classification model using FP Predict Plus
 
