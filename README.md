@@ -1,6 +1,6 @@
 # Introduction 
 
-This tutorial is part of a series on Red Hat Marketplace operator FP Predict Plus. Please refer to the prerequisites section for **Getting Started**.
+`This tutorial is part of a series on Red Hat Marketplace operator FP Predict Plus. Please refer to the prerequisites section for **Getting Started**.`
 
 ### How to build a Machine Learning classification model using FP Predict Plus
 
@@ -130,7 +130,7 @@ Click on `Predicted vs Actual` option to evaluate the model performance. We can 
 
 ### Download predicted results
 
-We can get other details about model performance by clicking on `Downloading results` per below.
+We can get other details about model performance by clicking on `Download results` per below.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/prdt-frd-dtls.png)
 
