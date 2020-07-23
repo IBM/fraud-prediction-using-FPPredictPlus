@@ -14,7 +14,7 @@ Examples of binary classification problems include:
 * Given recent user behavior, classify as churn or not.
 * Given recent transactions, classify as fraudulent or not.
 
-We will be using **`FP Predict Plus operator` from `Red Hat Marketplace`** to solve this usecase. Please refer the links under `references` section for more details.
+We will be using **`FP Predict Plus operator` from `Red Hat Marketplace`** to solve this usecase. Please refer the links under `References` section to know more about `FP Predict Plus operator` and `Red Hat Marketplace`.
 
 # Prerequisites
 
@@ -132,4 +132,5 @@ With this, we have come to an end of this tutorial. We have learnt how to use FP
 
 # References
 
-Please refer the links to know more about [FP Predict Plus](https://marketplace.redhat.com/en-us/products/fp-predict) and [Red Hat Marketplace](https://marketplace.redhat.com/en-us).
+[Click here to know more about FP Predict Plus](https://marketplace.redhat.com/en-us/products/fp-predict)
+[Click here to know more about Red Hat Marketplace](https://marketplace.redhat.com/en-us)
