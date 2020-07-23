@@ -133,4 +133,5 @@ With this, we have come to an end of this tutorial. We have learnt how to use FP
 # References
 
 [Click here to know more about FP Predict Plus](https://marketplace.redhat.com/en-us/products/fp-predict)
+
 [Click here to know more about Red Hat Marketplace](https://marketplace.redhat.com/en-us)
