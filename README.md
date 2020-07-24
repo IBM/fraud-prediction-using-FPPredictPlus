@@ -88,7 +88,7 @@ Click on `Variables` to understand the significance of each variable in predicti
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/var-imp.png)
 
-Click on `Variables of Models` to understand different scenarios explored by different models. We can observe that models `M-1` and `M-2` used four variables where as `M-3` used three variables and `M-7` used two variables. 
+Click on `Variables of Models` to understand different scenarios explored by different models. We can observe that models `M-1` and `M-2` used four variables where as `M-3` used three variables and `M-7` used two variables for building different models. 
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/mdl-variables.png)
 
@@ -108,7 +108,7 @@ Lets create a new job for prediction by clicking on `Dashboard` option in the le
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/prdt-frd.png)
 
-The predict job will start per below.
+The predict job will start per below. We should get a message stating `Job Completed Successfully` in a minute or two.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/job-prdt-frd.png)
 
@@ -136,7 +136,7 @@ We can get other details about model performance by clicking on `Download result
 
 # Summary
 
-With this, we have come to an end of this tutorial. We have learnt how to use FP Predict Plus platform for building AI models using GUI and also explored how to churn out predictions on the new dataset. This platform will be beneficial for developers, data scientists to build AI solutions quickly on different domains.
+With this, we have come to an end of this tutorial. We have learnt how to use FP Predict Plus platform for building AI models using GUI and also explored how to churn out predictions on the new dataset. This platform will be beneficial for developers, data scientists to build AI solutions quickly under different domains.
 
 # Related Links
 
