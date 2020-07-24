@@ -4,9 +4,9 @@
 
 ### How to build a Machine Learning classification model using FP Predict Plus
 
-`Machine learning` is a large field of study that overlaps with and inherits ideas from many related fields such as artificial intelligence. The focus of the field is learning, that is, acquiring skills or knowledge from experience. Most commonly, this means synthesizing useful concepts from historical data. As such, there are many different types of learning that you may encounter as a practitioner in the field of machine learning: from whole fields of study to specific techniques.
+**`Machine learning`** is a large field of study that overlaps with and inherits ideas from many related fields such as artificial intelligence. The focus of the field is learning, that is, acquiring skills or knowledge from experience. Most commonly, this means synthesizing useful concepts from historical data. As such, there are many different types of learning that you may encounter as a practitioner in the field of machine learning: from whole fields of study to specific techniques.
 
-`Classification` in machine learning and statistics is a supervised learning approach in which the computer program learns from the data given to it and make new observations or classifications. There are different types of classification like Binary Classification, Multi-Class Classification, Multi-Label Classification. In this tutorial, we will focus on `Binary classification` and the methodology can be extended for other types of classification.
+**`Classification`** in machine learning and statistics is a supervised learning approach in which the computer program learns from the data given to it and make new observations or classifications. There are different types of classification like Binary Classification, Multi-Class Classification, Multi-Label Classification. In this tutorial, we will focus on `Binary classification` and the methodology can be extended for other types of classification.
 
 Examples of binary classification problems include:
 
