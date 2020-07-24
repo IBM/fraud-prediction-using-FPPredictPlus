@@ -94,7 +94,7 @@ Click on `Variables of Models` to understand different scenarios explored by dif
 
 ### Download the model file
 
-We can download the results which has all the model details mentioned above for further analysis. Lets go ahead and click on `Download Results` and `Download Model File` under `Download Files` option and save them in your local system. The `Results` and `Model File` for this experiment is also available in this repo under `reports` and `model` folders. The `Model file` can be uploaded onto cloud using the `Dataset Management` option as described earlier.
+We can download the results which has all the model details mentioned above for further analysis. Lets go ahead and click on `Download Results` and `Download Model File` under `Download Files` option and save them in your local system. The `Results` and `Model File` for this experiment are also available in this repo under `reports` and `model` folders. The `Model file` can be uploaded onto cloud using the `Dataset Management` option as described earlier.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/dwld-r-m.png)
 
@@ -130,7 +130,7 @@ Click on `Predicted vs Actual` option to evaluate the model performance. We can 
 
 ### Download predicted results
 
-We can get other details about model performance by clicking on `Download results` per below.
+We can get other details about model performance by clicking on `Download Results` under `Download Files` option per below.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/prdt-frd-dtls.png)
 
@@ -143,3 +143,7 @@ With this, we have come to an end of this tutorial. We have learnt how to use FP
 [Click here to know more about FP Predict Plus](https://marketplace.redhat.com/en-us/products/fp-predict)
 
 [Click here to know more about Red Hat Marketplace](https://marketplace.redhat.com/en-us)
+
+# Citation for data :
+
+The dataset which is referenced in this tutorial is prepared by R.K.Sharath Kumar, Data Scientist, IBM India Software Labs.
