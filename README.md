@@ -134,7 +134,7 @@ We can get all the details about model performance by clicking on `Download Resu
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/prdt-frd-dtls.png)
 
-We can observe predicted results for the new data in the second tab `Prediction Result` under `Predicted Value` attribute in the excel file. The `Results` file is also uploaded under `reports` folder for reference.
+**We can observe predicted results for the new data in the second tab `Prediction Result` under `Predicted Value` attribute in the excel file. The `Results` file by name `predict-fraud-Report` is also available under `reports` folder for reference.**
 
 # Summary
 
