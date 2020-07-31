@@ -100,7 +100,7 @@ We can download the results which has all the model details mentioned above for 
 
 ### Prediction using new data
 
-In this section, we will learn how to do predictions using the model on new dataset. We will be using the `saved model` from previous step to predict new records from the `holdout data`.
+In this section, we will learn how to do predictions using the model on new dataset. We will be using the `saved model` from previous step to predict new records from the `holdout data`. The hold out data file will not have the target variable `Fraud_Risk` as we want to predict the outcome given the transactions data. 
 
 ### Create predict job
 
@@ -120,7 +120,7 @@ Lets look at job summary by clicking `Dashboard` and selecting `predict-fraud` j
 
 ### Analyze results of predict job
 
-We can get more details in the next step where we can observe that 18 models were built in 10 seconds and prediction was made on five records from the holdout dataset.
+We can get more details in the next step where we can observe that 18 models were built in 10 seconds and prediction was made on five records from the holdout dataset. 
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/prdt-frd-dtls.png)
 
@@ -130,9 +130,11 @@ Click on `Predicted vs Actual` option to evaluate the model performance. We can 
 
 ### Download predicted results
 
-We can get other details about model performance by clicking on `Download Results` under `Download Files` option per below.
+We can get all the details about model performance by clicking on `Download Results` under `Download Files` option per below. 
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/prdt-frd-dtls.png)
+
+We can observe predicted results for the new data in the second tab `Prediction Result` under `Predicted Value` attribute in the excel file. The `Results` file is also uploaded under `reports` folder for reference.
 
 # Summary
 
