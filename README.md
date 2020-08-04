@@ -100,7 +100,7 @@ We can download the results which has all the model details mentioned above for 
 
 ### Prediction using new data
 
-In this section, we will learn how to do predictions using the model on new dataset. We will be using the `saved model` from previous step to predict new records from the `holdout data`. The hold out data file will not have the target variable `Fraud_Risk` as we want to predict the outcome given the transactions data. 
+In this section, we will learn how to do predictions using the model on new dataset. We will be using the `saved model` from previous step to predict new records from the `holdout data`. The hold out data file will need to have the target variable column `Fraud_Risk` (without any values) to match the headers of the training data & predict the outcome given the transactions data. 
 
 ### Create predict job
 
