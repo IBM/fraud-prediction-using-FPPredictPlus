@@ -124,6 +124,7 @@ We can get more details in the next step where we can observe that 18 models wer
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/prdt-frd-dtls.png)
 
+`Note` :- Predicted vs Actual option is not clickable because there's no actual value to be compared. We have generated predicted values given a set of input parameters. We can review `Models, Variables & Variables of Models` as part of model evaluation.
 
 ### Download predicted results
 
