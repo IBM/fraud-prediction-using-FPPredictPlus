@@ -124,9 +124,6 @@ We can get more details in the next step where we can observe that 18 models wer
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/prdt-frd-dtls.png)
 
-Click on `Predicted vs Actual` option to evaluate the model performance. We can see that the model has performed well scoring 80% accuracy on the new data. 
-
-![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/c-f-holdout-mtrx.png)
 
 ### Download predicted results
 
@@ -138,7 +135,7 @@ We can get all the details about model performance by clicking on `Download Resu
 
 # Summary
 
-With this, we have come to an end of this tutorial. We have learnt how to use FP Predict Plus platform for building AI models using GUI and also explored how to churn out predictions on the new dataset. This platform will be beneficial for developers, data scientists to build AI solutions quickly under different domains.
+With this, we have come to an end of this tutorial. We have learnt how to use FP Predict Plus platform for building AI models using `Classification` technique and also explored how to churn out predictions on the new dataset. This platform will be beneficial for developers, data scientists to build AI solutions quickly under different domains.
 
 # Related Links
 
