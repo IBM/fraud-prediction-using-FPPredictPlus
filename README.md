@@ -1,6 +1,6 @@
 # Introduction 
 
-**This tutorial is part of a series on Red Hat Marketplace operator FP Predict Plus. Please refer to the `Prerequisites` section for `Getting Started`.**
+**This Code Pattern is part of a series on Red Hat Marketplace operator FP Predict Plus. Please refer to the `Prerequisites` section for `Getting Started`.**
 
 ### How to build a Machine Learning classification model using FP Predict Plus
 
@@ -14,7 +14,27 @@ Examples of binary classification problems include:
 * Given recent user behavior, classify as churn or not.
 * Given recent transactions, classify as fraudulent or not.
 
-We will be using **`FP Predict Plus operator` from `Red Hat Marketplace`** to solve this usecase. Please refer to the content under `Related Links` section to know more about `FP Predict Plus operator` and `Red Hat Marketplace`.
+We will focus on predicting fraudulent transactions using historical data and demonstrate the automated process of building models using FP Predict plus operator. 
+
+When the reader has completed this code pattern, they will understand how to :
+
+* Quickly set up the instance on open shift cluster for model building.
+* Ingest the data and initiate the FP Predict Plus process.
+* Build different models using FP Predict Plus and evaluate the performance.
+* Choose the best model and complete the deployment.
+* Generate new predictions using the deployed model.
+
+# Architecture Diagram
+
+![](https://github.com/IBM/fraud-prediction-using-FPPredictPlus/blob/master/images/architecture.png)
+
+1. User logs into FP Predict Plus platform using an instance of FP Predict plus operator.
+2. User uploads the data file in the CSV format to the Kubernetes storage on the platform.
+3. User initiates the model building process using FP Predict Plus operator and create pipelines.
+4. User evaluates different pipelines from FP Predict Plus and selects the best model for deployment.
+5. User generates accurate predictions by using the deployed model.
+
+We will be using **`FP Predict Plus operator` from `Red Hat Marketplace`** to solve this usecase. Please refer to the content under `Included components` section to know more about `FP Predict Plus operator` and `Red Hat Marketplace`.
 
 # Prerequisites
 
@@ -22,11 +42,38 @@ We need to install and set up the `FP Predict Plus operator on Open Shift cluste
 
 [Install and setup FP Predict Plus operator on Red Hat Marketplace](https://github.com/IBM/getting-started-with-fppredictplus)
 
-# Estimated time
+## Included components
 
-It should take about 30-45 minutes to complete this tutorial.
+* [Red Hat Marketplace](https://marketplace.redhat.com/en-us): A simpler way to buy and manage enterprise software, with automated deployment to any cloud.
+
+* [FP Predict Plus](https://marketplace.redhat.com/en-us/products/fp-predict): An Automated, self learning, and Multi Modeling AI that handles Discrete Target variable, Continuous Target variable and Time series data with no need for coding.
+
+* [Red Hat OpenShift Container Platform](https://www.openshift.com/): Empower developers to innovate and ship faster with the leading hybrid cloud, enterprise container platform.
+
+
+## Featured technologies
+
+* [Artificial Intelligence](https://developer.ibm.com/technologies/artificial-intelligence/): Any system which can mimic cognitive functions that humans associate with the human mind, such as learning and problem solving.
+
+* [Data Science](https://developer.ibm.com/code/technologies/data-science/): Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
+
+* [Analytics](https://developer.ibm.com/code/technologies/analytics/): Analytics delivers the value of data for the enterprise.
+
 
 # Steps
+
+Follow these steps to setup and run this code pattern using `FP Predict Plus`.
+
+1. [Add the data](#1-add-the-data)
+1. [Create a job](#2-create-a-njob)
+1. [Review the job details](#3-review-the-job-details)
+1. [Analyze results](#4-analyze-results)
+1. [Download the model file](#5-download-the-model-file)
+1. [Prediction using new data](#6-prediction-using-new-data)
+1. [Create predict job](#7-create-predict-job)
+1. [Check job summary](#8-check-job-summary)
+1. [Analyze results of predict job](#9-analyze-results-of-predict-job)
+1. [Download predicted results](#10-download-predicted-results)
 
 ### Add the data
 
@@ -137,12 +184,6 @@ We can get all the details about model performance by clicking on `Download Resu
 # Summary
 
 With this, we have come to an end of this tutorial. We have learnt how to use FP Predict Plus platform for building AI models using `Classification` technique and also explored how to churn out predictions on the new dataset. This platform will be beneficial for developers, data scientists to build AI solutions quickly under different domains.
-
-# Related Links
-
-[Click here to know more about FP Predict Plus](https://marketplace.redhat.com/en-us/products/fp-predict)
-
-[Click here to know more about Red Hat Marketplace](https://marketplace.redhat.com/en-us)
 
 # Citation for data :
 
