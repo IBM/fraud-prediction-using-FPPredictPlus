@@ -30,7 +30,7 @@ When the reader has completed this code pattern, they will understand how to :
 
 1. User logs into FP Predict Plus platform using an instance of FP Predict plus operator.
 2. User uploads the data file in the CSV format to the Kubernetes storage on the platform.
-3. User initiates the model building process using FP Predict Plus operator and create pipelines.
+3. User initiates the model building process using FP Predict Plus operator on OpenShift cluster and create pipelines.
 4. User evaluates different pipelines from FP Predict Plus and selects the best model for deployment.
 5. User generates accurate predictions by using the deployed model.
 
@@ -65,7 +65,7 @@ We need to install and set up the `FP Predict Plus operator on Open Shift cluste
 Follow these steps to setup and run this code pattern using `FP Predict Plus`.
 
 1. [Add the data](#1-add-the-data)
-1. [Create a job](#2-create-a-njob)
+1. [Create a job](#2-create-a-job)
 1. [Review the job details](#3-review-the-job-details)
 1. [Analyze results](#4-analyze-results)
 1. [Download the model file](#5-download-the-model-file)
