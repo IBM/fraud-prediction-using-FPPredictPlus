@@ -161,7 +161,7 @@ The predict job will start per below. We should get a message stating `Job Compl
 
 ## 8. Check job summary
 
-Lets look at job summary by clicking `Dashboard` and selecting `predict-fraud` job. We can observe that, there are three records out of five having 90%-100% probability.
+Lets look at job summary by clicking `Dashboard` and selecting `predict-fraud` job. We can observe that, there are three records out of five having 90%-100% probability of predicting the outcome.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/job-chk.png)
 
