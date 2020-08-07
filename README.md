@@ -14,11 +14,11 @@ Examples of binary classification problems include:
 * Given recent user behavior, classify as churn or not.
 * Given recent transactions, classify as fraudulent or not.
 
-We will focus on predicting fraudulent transactions using historical data and demonstrate the automated process of building models using FP Predict plus operator. 
+**We will focus on predicting fraudulent transactions using historical data and demonstrate the automated process of building models using `FP Predict plus operator` from Red Hat Marketplace.**
 
 When the reader has completed this code pattern, they will understand how to :
 
-* Quickly set up the instance on open shift cluster for model building.
+* Quickly set up the instance on OpenShift cluster for model building.
 * Ingest the data and initiate the FP Predict Plus process.
 * Build different models using FP Predict Plus and evaluate the performance.
 * Choose the best model and complete the deployment.
