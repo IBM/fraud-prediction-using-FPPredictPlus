@@ -34,7 +34,7 @@ When the reader has completed this code pattern, they will understand how to :
 4. User evaluates different pipelines from FP Predict Plus and selects the best model for deployment.
 5. User generates accurate predictions by using the deployed model.
 
-We will be using **`FP Predict Plus operator` from `Red Hat Marketplace`** to solve this usecase. Please refer to the content under `Included components` section to know more about `FP Predict Plus operator` and `Red Hat Marketplace`.
+We will be using **`FP Predict Plus operator` from `Red Hat Marketplace`** to solve this usecase. Please refer to the content under **`Included components`** section to know more about `FP Predict Plus operator` and `Red Hat Marketplace`.
 
 # Prerequisites
 
@@ -75,7 +75,7 @@ Follow these steps to setup and run this code pattern using `FP Predict Plus`.
 1. [Analyze results of predict job](#9-analyze-results-of-predict-job)
 1. [Download predicted results](#10-download-predicted-results)
 
-### 1. Add the data
+## 1. Add the data
 
 Launch the FP Predict Plus platform and sign in using the default credentials. Lets begin by adding `datasets`. Clone this repo and navigate to `data` folder to download the datasets onto your local file system. 
 
@@ -89,7 +89,7 @@ Click on `Browse` and select the three csv files for upload. The datasets gets u
 
 **Note :- Only `csv` format is supported and the dataset need to have a column with unique values. In these csv files, we have added a `Count` column to be unique. The datasets needs to be split into training, testing and holdout (validation) datasets before hand.** `Citation is needed to use these datasets for other projects.`
 
-### 2. Create a job
+## 2. Create a job
 
 We need to create a new `job` in the platform. Click on `Dashboard` which is the first option on the left navigation pane and hit `Start` on the top right hand side.
 
@@ -111,7 +111,7 @@ The model will try to use different scenarios like all variables/few variables e
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/job-complete.png)
 
-### 3. Review the job details
+## 3. Review the job details
 
 Lets review the job which has been created for us by clicking on `Dashboard` which is the first option on the left navigation pane and select the job with name `detect-fraud`. The `number` preceding before the job name is to identify how many jobs have run so far and can be ignored. We can observe the `probability Distribution` of the model on the testing data having 50 records with the probability between `90%-100% for 43 records`. The model has performed with good accuracy on relatively small datasets. 
 
@@ -121,7 +121,7 @@ We can observe the complete job details like `Description`, `Modelling` and `Pre
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/job-details.png)
 
-### 4. Analyze results
+## 4. Analyze results
 
 Lets review the model performance in detail. Click on `Predicted vs Actual` option to see the Confusion matrix. The model has achieved 86% `Overall Accuracy` which is good considering the fact that training data had only 505 records & testing data had about 50 records. The accuracy can be expected to be higher for larger datasets. Avg `Precision` rate is about 84% and average `Recall` rate is about 80%. 
 
@@ -139,17 +139,17 @@ Click on `Variables of Models` to understand different scenarios explored by dif
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/mdl-variables.png)
 
-### 5. Download the model file
+## 5. Download the model file
 
 We can download the results which has all the model details mentioned above for further analysis. Lets go ahead and click on `Download Results` and `Download Model File` under `Download Files` option and save them in your local system. The `Results` and `Model File` for this experiment are also available in this repo under `reports` and `model` folders. The `Model file` can be uploaded onto cloud using the `Dataset Management` option as described earlier.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/dwld-r-m.png)
 
-### 6. Prediction using new data
+## 6. Prediction using new data
 
 In this section, we will learn how to do predictions using the model on new dataset. We will be using the `saved model` from previous step to predict new records from the `holdout data`. The hold out data file will need to have the target variable column `Fraud_Risk` (without any values) to match the headers of the training data & predict the outcome given the transactions data. 
 
-### 7. Create predict job
+## 7. Create predict job
 
 Lets create a new job for prediction by clicking on `Dashboard` option in the left navigation pane and hit `Start`. Update the `job name`, `description`, select `Predict` under `Tasks` as we have already built the model in previous steps. Upload the `model file` and `holdout data` from cloud or local whichever is convenient for you and select `Unique Identifier` as `Count`.
 
@@ -159,13 +159,13 @@ The predict job will start per below. We should get a message stating `Job Compl
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/job-prdt-frd.png)
 
-### 8. Check job summary
+## 8. Check job summary
 
 Lets look at job summary by clicking `Dashboard` and selecting `predict-fraud` job. We can observe that, there are three records out of five having 90%-100% probability.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/job-chk.png)
 
-### 9. Analyze results of predict job
+## 9. Analyze results of predict job
 
 We can get more details in the next step where we can observe that 18 models were built in 10 seconds and prediction was made on five records from the holdout dataset. 
 
@@ -173,7 +173,7 @@ We can get more details in the next step where we can observe that 18 models wer
 
 `Note` :- Predicted vs Actual option is not clickable because there's no actual value to be compared. We have generated predicted values given a set of input parameters. We can review `Models, Variables & Variables of Models` as part of model evaluation.
 
-### 10. Download predicted results
+## 10. Download predicted results
 
 We can get all the details about model performance by clicking on `Download Results` under `Download Files` option per below. 
 
