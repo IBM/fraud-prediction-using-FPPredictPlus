@@ -1,70 +1,62 @@
 # Introduction 
 
-**This Code Pattern is part of a series on Red Hat Marketplace operator FP Predict Plus. Please refer to the `Prerequisites` section for `Getting Started`.**
+**This code pattern is part of a series on Red Hat Marketplace operator FP Predict Plus. Please refer to the `Prerequisites` section for `Getting Started`.**
 
-### How to build a Machine Learning classification model using FP Predict Plus
+### How to build a machine learning classification model using FP Predict Plus
 
-**`Machine learning`** is a large field of study that overlaps with and inherits ideas from many related fields such as artificial intelligence. The focus of the field is learning, that is, acquiring skills or knowledge from experience. Most commonly, this means synthesizing useful concepts from historical data. As such, there are many different types of learning that you may encounter as a practitioner in the field of machine learning from whole fields of study to specific techniques.
+**Machine learning** is the science where in order to predict a value, algorithms are applied for a system to learn patterns within data. Most commonly, this means synthesizing useful concepts from historical data. Machine learning uses different types of learning, related to whole fields of study to specific techniques.
 
-**`Classification`** in machine learning and statistics is a supervised learning approach in which the computer program learns from the data given to it and make new observations or classifications. There are different types of classification like Binary Classification, Multi-Class Classification, Multi-Label Classification. In this tutorial, we will focus on `Binary classification` and the methodology can be extended for other types of classification.
+**Classification** in machine learning and statistics is a supervised learning approach in which the computer program learns from the data given to it and makes new observations or classifications. Different types of classification include *binary classification, multiclass classification,* and *multilabel classification*. In this tutorial, we focus on binary classification, but you can extend the methodology for other types of classification.
 
 Examples of binary classification problems include:
 
-* Given an example, classify if it is spam or not.
-* Given recent user behavior, classify as churn or not.
-* Given recent transactions, classify as fraudulent or not.
+* Classifying an example email as spam or not. 
+* Classifying recent user behavior as churn or not.
+* Classifying recent transactions as fraudulent or not.
 
-**We will focus on predicting fraudulent transactions using historical data and demonstrate the automated process of building models using `FP Predict plus operator` from Red Hat Marketplace.**
+**Specifically, this code pattern focuses on predicting fraudulent transactions using historical data and demonstrates the automated process of building models using `FP Predict plus operator` from Red Hat Marketplace.**
 
-When the reader has completed this code pattern, they will understand how to :
+After completing this code pattern, you will understand how to:
 
-* Quickly set up the instance on OpenShift cluster for model building.
+* Quickly set up the instance on an OpenShift cluster for model building. <!--EM: The instance of FP Predict +?-->
 * Ingest the data and initiate the FP Predict Plus process.
-* Build different models using FP Predict Plus and evaluate the performance.
+* Build different models using FP Predict Plus and evaluate the performance of those models.
 * Choose the best model and complete the deployment.
 * Generate new predictions using the deployed model.
 
-# Architecture Diagram
+# Architecture diagram
 
 ![](https://github.com/IBM/fraud-prediction-using-FPPredictPlus/blob/master/images/architecture_c.png)
 
 1. User logs into FP Predict Plus platform using an instance of FP Predict plus operator.
-2. User uploads the data file in the CSV format to the Kubernetes storage on the platform.
-3. User initiates the model building process using FP Predict Plus operator on OpenShift cluster and create pipelines.
+2. User uploads the data file in the CSV format to the Kubernetes storage on the Red Hat OpenShift platform.
+3. User initiates the model-building process using the FP Predict Plus operator on an OpenShift cluster and creates pipelines.
 4. User evaluates different pipelines from FP Predict Plus and selects the best model for deployment.
 5. User generates accurate predictions by using the deployed model.
 
-We will be using **`FP Predict Plus operator` from `Red Hat Marketplace`** to solve this usecase. Please refer to the content under **`Included components`** section to know more about `FP Predict Plus operator` and `Red Hat Marketplace`.
+In this code pattern, we show you how to use **FP Predict Plus operator from Red Hat Marketplace** in our steps. Please refer to the content under **Included components** section to know more about `FP Predict Plus operator` and `Red Hat Marketplace`.
 
-# Prerequisites
+## Prerequisites
 
-We need to install and set up the `FP Predict Plus operator on Open Shift cluster` as per the instructions given below.
-
-[Install and setup FP Predict Plus operator on Red Hat Marketplace](https://github.com/IBM/getting-started-with-fppredictplus)
+You need to install and set up the FP Predict Plus operator on Open Shift cluster following the instruction in this tutorial: [Get started using Findability Platform Predict Plus on Red Hat Marketplace](https://developer.ibm.com/tutorials/get-started-findability-platform-predict-plus-red-hat-marketplace/).
 
 ## Included components
 
-* [Red Hat Marketplace](https://marketplace.redhat.com/en-us): A simpler way to buy and manage enterprise software, with automated deployment to any cloud.
-
-* [FP Predict Plus](https://marketplace.redhat.com/en-us/products/fp-predict): An Automated, self learning, and Multi Modeling AI that handles Discrete Target variable, Continuous Target variable and Time series data with no need for coding.
-
-* [Red Hat OpenShift Container Platform](https://www.openshift.com/): Empower developers to innovate and ship faster with the leading hybrid cloud, enterprise container platform.
+* [Red Hat Marketplace](https://marketplace.redhat.com/en-us): A simpler way to buy and manage enterprise software, with automated deployment to any cloud
+* [FP Predict Plus](https://marketplace.redhat.com/en-us/products/fp-predict): An sutomated, self learning, and multi-modeling AI tool that handles discrete target variables, continuous target variables, and time series data with no need for coding
+* [Red Hat OpenShift Container Platform](https://www.openshift.com/): A hybrid cloud, enterprise container platform that empowers developers to innovate and ship faster
 
 
 ## Featured technologies
 
-* [Artificial Intelligence](https://developer.ibm.com/technologies/artificial-intelligence/): Any system which can mimic cognitive functions that humans associate with the human mind, such as learning and problem solving.
-
-* [Data Science](https://developer.ibm.com/code/technologies/data-science/): Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
-
+* [Artificial intelligence](https://developer.ibm.com/technologies/artificial-intelligence/): Any system which can mimic cognitive functions that humans associate with the human mind, such as learning and problem solving.
+* [Data science](https://developer.ibm.com/code/technologies/data-science/): Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
 * [Analytics](https://developer.ibm.com/code/technologies/analytics/): Analytics delivers the value of data for the enterprise.
-
-* [Machine Learning](https://www.ibm.com/cloud/learn/machine-learning): Machine learning is a form of AI that enables a system to learn from data rather than through explicit programming. 
-
+* [Machine learning](https://www.ibm.com/cloud/learn/machine-learning): Machine learning is a form of AI that enables a system to learn from data rather than through explicit programming. 
 
 # Steps
 
-Follow these steps to setup and run this code pattern using `FP Predict Plus`.
+Follow these steps to set up and run this code pattern using FP Predict Plus.
 
 1. [Add the data](#1-add-the-data)
 1. [Create a job](#2-create-a-job)
@@ -79,109 +71,113 @@ Follow these steps to setup and run this code pattern using `FP Predict Plus`.
 
 ## 1. Add the data
 
-Launch the FP Predict Plus platform and sign in using the default credentials. Lets begin by adding `datasets`. Clone this repo and navigate to `data` folder to download the datasets onto your local file system. 
+Launch the FP Predict Plus platform and sign in using the default credentials. Let's begin by adding `data sets`. Clone this repo and navigate to the `data` folder to download the data sets onto your local file system. 
 
-Click on `Dataset Management` which is the third option on the left navigation pane and select `Datasets` on the top. 
+Click on **Dataset Management** which is the third option on the left navigation pane and select **Datasets** on the top. 
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/add-data.png)
 
-Click on `Browse` and select the three csv files for upload. The datasets gets uploaded to the platform in a minute. The upload time is dependent on the size of the datasets. 
+Click on **Browse** and select the three CSV files for upload. It takes about 1 minute to upload the data sets to the platform, depending on the size of the data sets. 
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/data.png)
 
-**Note :- Only `csv` format is supported and the dataset need to have a column with unique values. In these csv files, we have added a `Count` column to be unique. The datasets needs to be split into training, testing and holdout (validation) datasets before hand.** `Citation is needed to use these datasets for other projects.`
+**Note :Only the .csv format is supported, and the data set needs to have a column with unique values. In these CSV files, we added a `Count` column to be unique. The data sets need to be split into training, testing, and holdout (validation) data sets before hand.** 
+
+Citation is needed to use these data sets for other projects. <!--EM: What does that mean?-->
 
 ## 2. Create a job
 
-We need to create a new `job` in the platform. Click on `Dashboard` which is the first option on the left navigation pane and hit `Start` on the top right hand side.
+Now, let's create a new job in the platform. Click on **Dashboard**, which is the first option on the left navigation pane, and click **Start** on the top right hand side.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/job-strt.png)
 
-We need to click on `No` as our data does not contain Date or Timestamps. The platform will understand to create a `Predict` job with no Date or Timestamps and if the dataset has Date or Timestamps, then platform will create a `Forecast` job.
+Select **No** to indicate that your data does not contain date or timestamps. The platform will understand to create a `Predict` job with no date or timestamps. If the data set has a date or timestamp, the platform will create a `Forecast` job.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/job-sel.png)
 
-Lets go ahead and create a new job by filling in the details per below. We will update the name, select the task as `Model + Predict` as that is what we will be doing. We can select `Model` and it will build a model for us and select `Predict` if we have a model file ready for doing predictions. Set the dataset location to `Cloud` and select the train and test datasets using `Browse` for upload. Select the Target Variable as `Fraud_Risk` and Unique Identifier as `Count`. Under `Advanced settings`, Operation Mode should be set to `Automated`. Hit `Run` to get the job started.
+Now, let's go ahead and create a new job by filling in the details. Update the name and select the task as **Model + Predict** since that is the task you will be doing. If you select **Model**, it<!--EM: What is "it" referencing here?--> will build a model for us. Select **Predict** if you have a model file ready for doing predictions. Set the data set location to **Cloud**, and select the "Train and Test" data sets using the Browse function for upload. Set the Target Variable to be **Fraud_Risk** and the Unique Identifier to be **Count**. Under the Advanced Settings tab, set the Operation Mode to **Automated**. Select **Run** to start the job.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/crt-job.png)
 
-The job will take a couple of minutes to complete. We can observe how many models are created and the scenarios evaluated in the process. 
+The job will take a couple of minutes to complete. You can observe how many models are created and the scenarios evaluated in the process. 
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/job-rng.png)
 
-The model will try to use different scenarios like all variables/few variables etc for predicting the outcome. We should see the job status per below.
+The model will try to use different scenarios, for instance, all variables or few variables, for predicting the outcome. You should see the job status per below. <!--EM: Does that mean that you should see it when it's stopped running?-->
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/job-complete.png)
 
 ## 3. Review the job details
 
-Lets review the job which has been created for us by clicking on `Dashboard` which is the first option on the left navigation pane and select the job with name `detect-fraud`. The `number` preceding before the job name is to identify how many jobs have run so far and can be ignored. We can observe the `probability Distribution` of the model on the testing data having 50 records with the probability between `90%-100% for 43 records`. The model has performed with good accuracy on relatively small datasets. 
+Let's review the job details. Click the **Dashboard** tab, and select the job with the name `detect-fraud`. The number that precedes the job name identifies how many jobs have run so far. You an ignore this number. 
+
+In our example, the `probability distribution` of the model on the testing data has 50 records with the probability between `90%-100% for 43 records`. <!--EM: What does that mean exactly?--> The model has performed with good accuracy on relatively small data sets. 
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/view-job.png)
 
-We can observe the complete job details like `Description`, `Modelling` and `Prediction`. The system built 18 models using 505 records in 10 seconds from training data and did Prediction on 50 records from testing data.
+You can observe the complete job details, including the description, modeling, and prediction. The system built 18 models using 505 records in 10 seconds from the training data and ran predictions on 50 records from the testing data.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/job-details.png)
 
 ## 4. Analyze results
 
-Lets review the model performance in detail. Click on `Predicted vs Actual` option to see the Confusion matrix. The model has achieved 86% `Overall Accuracy` which is good considering the fact that training data had only 505 records & testing data had about 50 records. The accuracy can be expected to be higher for larger datasets. Avg `Precision` rate is about 84% and average `Recall` rate is about 80%. 
+To review the model performance in detail, select the **Predicted vs Actual** option to see the Confusion matrix. The model has achieved 86% "Overall Accuracy" which is a high percentage, especially considering the fact that the training data had only 505 records and the testing data had approximately 50 records. You can expect the accuracy to be higher for larger data sets. The average Precision rate is about 84%, and the average Recall rate is about 80%. 
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/c-f-mtrx.png)
 
-Click on `Models` to understand how many predictions are done by each model. We can observe that model `M-2` has scored for 29 records from the testing data.
+Click on **Models** to understand how many predictions each model does. Notice that model `M-2` has scored for 29 records from the testing data.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/scoring-models.png)
 
-Click on `Variables` to understand the significance of each variable in predicting the outcome. We can observe that `Credit_History_Available` was used by five models to predict the outcome thereby making it the most significant variable impacting the outcome. 
+Select **Variables** to understand the significance of each variable in predicting the outcome. Notice that five models used "Credit_History_Available" to predict the outcome, which makes it the most significant variable to impact the outcome. 
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/var-imp.png)
 
-Click on `Variables of Models` to understand different scenarios explored by different models. We can observe that models `M-1` and `M-2` used four variables where as `M-3` used three variables and `M-7` used two variables for building different models. 
+Select **Variables of Models** to understand different scenarios explored by different models. Observe that models `M-1` and `M-2` used four variables, whereas `M-3` used three variables and `M-7` used two variables for building different models. 
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/mdl-variables.png)
 
 ## 5. Download the model file
 
-We can download the results which has all the model details mentioned above for further analysis. Lets go ahead and click on `Download Results` and `Download Model File` under `Download Files` option and save them in your local system. The `Results` and `Model File` for this experiment are also available in this repo under `reports` and `model` folders. The `Model file` can be uploaded onto cloud using the `Dataset Management` option as described earlier.
+To download the results for further analysis of all the model details, click on **Download Files >  Download Results > Download Model File**. Save the files to your local system. The Results and Model File for this experiment are also available in this repo under the `reports` and `model` folders. You can upload the Model file to a cloud using the `Dataset Management` option as described earlier.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/dwld-r-m.png)
 
 ## 6. Prediction using new data
 
-In this section, we will learn how to do predictions using the model on new dataset. We will be using the `saved model` from previous step to predict new records from the `holdout data`. The hold out data file will need to have the target variable column `Fraud_Risk` (without any values) to match the headers of the training data & predict the outcome given the transactions data. 
+In this section, learn how to do predictions using the model on a new data set. We use the `saved model` from the previous step to predict new records from the `holdout data`. In the hold out data file, the target variable column `Fraud_Risk` (without any values) needs to match the headers of the training data and predict the outcome given the transactions data. 
 
 ## 7. Create predict job
 
-Lets create a new job for prediction by clicking on `Dashboard` option in the left navigation pane and hit `Start`. Update the `job name`, `description`, select `Predict` under `Tasks` as we have already built the model in previous steps. Upload the `model file` and `holdout data` from cloud or local whichever is convenient for you and select `Unique Identifier` as `Count`.
+To create a new job for prediction, select **Dashboard** in left navigation pane and click **Start**. Update the job name and description. Under Tasks, select **Predict** since you already built the model in the previous steps. Upload the `model file` and `holdout data` from you cloud or local system (whichever is most convenient) and set the Unique Identifier to be "Count".
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/prdt-frd.png)
 
-The predict job will start per below. We should get a message stating `Job Completed Successfully` in a minute or two.
+The predict job will start per below. You should get a message stating `Job Completed Successfully` in a minute or two.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/job-prdt-frd.png)
 
 ## 8. Check job summary
 
-Lets look at job summary by clicking `Dashboard` and selecting `predict-fraud` job. We can observe that, there are three records out of five having 90%-100% probability of predicting the outcome.
+To view the job summary, click **Dashboard** and select the `predict-fraud` job. There are three records out of five that have a 90%-100% probability of predicting the outcome.
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/job-chk.png)
 
 ## 9. Analyze results of predict job
 
-We can get more details in the next step where we can observe that 18 models were built in 10 seconds and prediction was made on five records from the holdout dataset. 
+We can get more details in the next step where we can observe that 18 models were built in 10 seconds and prediction was made on five records from the holdout dataset. <!--EM: To clarify, should we say something like: You can now analyze the results from the job summary above. Note that 18 models were built in 10 seconds . . . . -->
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/prdt-frd-dtls.png)
 
-`Note` :- Predicted vs Actual option is not clickable because there's no actual value to be compared. We have generated predicted values given a set of input parameters. We can review `Models, Variables & Variables of Models` as part of model evaluation.
+`Note` :- Predicted vs Actual option is not clickable because there's no actual value to be compared. We have generated the predicted values given a set of input parameters. You can review models, variables, and variables of models as part of the model evaluation.
 
 ## 10. Download predicted results
 
-We can get all the details about model performance by clicking on `Download Results` under `Download Files` option per below. 
+To view the comprehensive data about model performance, select **Download Files > Download Results** as the followign screenshot shows. 
 
 ![](https://github.com/IBM/build-a-classification-model-using-fppredictplus/blob/master/images/prdt-frd-dtls.png)
 
-**We can observe predicted results for the new data in the second tab `Prediction Result` under `Predicted Value` attribute in the downloaded excel file. The `Results` file by name `predict-fraud-Report` is also available under `reports` folder for reference.**
+**We can observe predicted results for the new data in the second tab `Prediction Result` under `Predicted Value` attribute in the downloaded Excel file. The Results file named "predict-fraud-Report" is also available under the Reports folder for reference.**
 
 # Summary
 
